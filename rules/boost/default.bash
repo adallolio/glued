@@ -37,8 +37,7 @@ configure()
 {
     cd "../boost_$vendor_version" &&
     ./bootstrap.sh \
-        --with-icu="$cfg_dir_toolchain_sysroot/usr" \
-        --with-libraries="regex,filesystem,system,thread"
+        --with-icu="$cfg_dir_toolchain_sysroot/usr"
 
     GXX_VER=$(${cmd_target_cxx} -dumpversion)
     echo "using gcc : ${GXX_VER}  : ${cmd_target_cxx} : <cxxflags>\"-pipe -Os  -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 ${cfg_target_gcc_flags} \" <linkflags>\"\" ;" > user-config.jam

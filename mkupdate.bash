@@ -1,7 +1,7 @@
 #! /bin/bash
 ###########################################################################
 # GLUED: GNU/Linux Uniform Environment Distribution                       #
-# Copyright (C) 2007-2019 Universidade do Porto - Faculdade de Engenharia #
+# Copyright (C) 2007-2017 Universidade do Porto - Faculdade de Engenharia #
 # Laboratório de Sistemas e Tecnologia Subaquática (LSTS)                 #
 ###########################################################################
 # This program is free software; you can redistribute it and/or modify    #
@@ -24,12 +24,12 @@
 
 update_tool()
 {
-    rsync -v "$1" root@"$2":/opt/"$cfg_glued_vendor"/glued/
+    rsync -v "$1" root@"$2":/opt/lsts/glued/
     if [ $? -eq 0 ]; then
         return 0
     fi
 
-    scp "$1" root@"$2":/opt/"$cfg_glued_vendor"/glued/
+    scp "$1" root@"$2":/opt/lsts/glued/
     if [ $? -eq 0 ]; then
         return 0
     fi

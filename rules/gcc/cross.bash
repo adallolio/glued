@@ -49,15 +49,10 @@ host_install()
 
 target_install()
 {
-    libdir=lib
-    if [ -d "$cfg_dir_toolchain/$cfg_target_canonical/lib64" ]; then
-        libdir=lib64
-    fi
-
     $cmd_mkdir \
-        "$cfg_dir_rootfs/usr/$libdir" &&
+        "$cfg_dir_rootfs/usr/lib" &&
 
-    for f in "$cfg_dir_toolchain/$cfg_target_canonical/$libdir/"{libgcc_s,libstdc++}.so*; do
+    for f in "$cfg_dir_toolchain/$cfg_target_canonical/lib/"{libgcc_s,libstdc++}.so*; do
         base="$(basename $f)"
 
         if [ $(echo "$base" | grep '\.py' 2> /dev/null) ]; then

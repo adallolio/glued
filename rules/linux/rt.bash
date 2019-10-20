@@ -2,12 +2,12 @@
 
 version=\
 (
-    '4.4.66-rt79'
+    '3.14.64-rt67'
 )
 
 url=\
 (
-    "https://www.kernel.org/pub/linux/kernel/v4.x/linux-$(linux_mmp_version).tar.xz"
+    "https://www.kernel.org/pub/linux/kernel/v3.x/linux-$(linux_mmp_version).tar.xz"
     "https://www.kernel.org/pub/linux/kernel/projects/rt/$(linux_mm_version)/patch-$version.patch.gz"
 )
 

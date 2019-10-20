@@ -1,7 +1,7 @@
 #! /bin/bash
 ###########################################################################
 # GLUED: GNU/Linux Uniform Environment Distribution                       #
-# Copyright (C) 2007-2019 Universidade do Porto - Faculdade de Engenharia #
+# Copyright (C) 2007-2017 Universidade do Porto - Faculdade de Engenharia #
 # Laboratório de Sistemas e Tecnologia Subaquática (LSTS)                 #
 ###########################################################################
 # This program is free software; you can redistribute it and/or modify    #
@@ -23,7 +23,7 @@
 ###########################################################################
 
 # Config: GLUED version.
-cfg_glued_version='2017.11'
+cfg_glued_version='2016.05'
 # Config: GLUED vendor.
 cfg_glued_vendor='lsts'
 

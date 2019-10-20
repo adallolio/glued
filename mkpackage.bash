@@ -1,7 +1,7 @@
 #! /bin/bash
 ###########################################################################
 # GLUED: GNU/Linux Uniform Environment Distribution                       #
-# Copyright (C) 2007-2019 Universidade do Porto - Faculdade de Engenharia #
+# Copyright (C) 2007-2017 Universidade do Porto - Faculdade de Engenharia #
 # Laboratório de Sistemas e Tecnologia Subaquática (LSTS)                 #
 ###########################################################################
 # This program is free software; you can redistribute it and/or modify    #
@@ -72,7 +72,7 @@ download()
         fi
 
 	# First try LSTS mirror.
-	lsts_url="https://www.lsts.pt/glued/$(basename $u)"
+	lsts_url="http://lsts.pt/glued/$(basename $u)"
         download_tool "$lsts_url" "$cfg_dir_downloads/$file"
         if [ $? -ne 0 ]; then
 	    # Then try OceanScan-MST mirror.
