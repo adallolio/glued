@@ -1,6 +1,6 @@
 version=\
 (
-    "2.6"
+    "4.4.1"
 )
 
 url=\
@@ -10,7 +10,7 @@ url=\
 
 md5=\
 (
-    '5bf6097833a3fea6a9e51b0a456c6922'
+    '9c2ca54e7f353a861e57525ff6da335b'
 )
 
 configure()
@@ -43,13 +43,13 @@ host_install()
         install-headers
 
     $cmd_make \
-        install-libs
+        install-data
 }
 
 target_install()
 {
     $cmd_make \
-        install-libs
+        install
 
     $cmd_cp -r "$cfg_dir_builds/ffmpeg/build/"* "$cfg_dir_rootfs/usr/lib/"
     $cmd_cp -r "$cfg_dir_builds/ffmpeg/build/"* "$cfg_dir_toolchain_sysroot/usr/lib/"
