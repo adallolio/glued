@@ -5,7 +5,7 @@ version=\
 
 url=\
 (
-    'git://arago-project.org/git/projects/am33x-cm3.git'
+    'git@github.com:beagleboard/am33x-cm3.git'
 )
 
 maintainer=\
@@ -16,11 +16,6 @@ maintainer=\
 download()
 {
     git clone "$url" "$cfg_dir_builds/$pkg/$pkg-$version"
-}
-
-unpack()
-{
-    git checkout "$version"
 }
 
 host_install()
