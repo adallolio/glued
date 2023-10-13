@@ -29,11 +29,11 @@ ENV DEBIAN_FRONTEND noninteractive
 # Update distro.
 RUN apt-get update -y
 RUN apt-get dist-upgrade -y
-RUN apt-get install -y wget
-RUN apt-get install -y bzip2
-RUN apt-get install -y git
-RUN apt-get install -y g++-multilib
-RUN apt-get install -y cmake
-RUN apt-get install -y file
-RUN apt-get install -y kmod
+RUN apt-get --allow-unauthenticated install -y wget
+RUN apt-get --allow-unauthenticated install -y bzip2
+RUN apt-get --allow-unauthenticated install -y git
+RUN apt-get --allow-unauthenticated install -y g++-multilib
+RUN apt-get --allow-unauthenticated install -y cmake
+RUN apt-get --allow-unauthenticated install -y file
+RUN apt-get --allow-unauthenticated install -y kmod
 RUN sed -i 's#mozilla\/DST_Root_CA_X3.crt#!mozilla\/DST_Root_CA_X3.crt#g' /etc/ca-certificates.conf && update-ca-certificates --fresh
